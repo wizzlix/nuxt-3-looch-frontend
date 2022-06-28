@@ -22,13 +22,13 @@
   </div>
 </template>
 
+<script setup>
+useHead({
+  titleTemplate: `${"Заказы | Service Looch"}`
+})
+</script>
+
 <script>
-
-
-
-
-
-
 	export default {
 		name: "OrdersMainPage",
 		data(){

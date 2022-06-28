@@ -5,11 +5,13 @@
     </section>
 
     <header id="header">
-      <NavigationNavBar/>
+      <NavigationNavBar :user="user" :pages="pages"/>
     </header>
 
 		<div class="wrapper">
-				<slot />
+      <div class="container">
+        <slot />
+      </div>
 		</div>
 
 		<footer>
@@ -19,8 +21,32 @@
 </template>
 
 <script lang="ts">
+
+import {mapState} from 'pinia'
+import {useUserStore} from "~/stores/user"
+import {usePagesStore} from "~/stores/pages"
+
+
 export default {
   name: 'NuxtWrapper',
+
+
+  setup(){
+    const user = useUserStore()
+    user.init()
+
+    const pages = usePagesStore()
+    pages.init()
+  },
+
+  computed: {
+    ...mapState(useUserStore, {
+      user: 'user'
+    }),
+    ...mapState(usePagesStore, {
+      pages: 'pages'
+    }),
+  },
 }
 </script>
 

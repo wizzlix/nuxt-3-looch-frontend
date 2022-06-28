@@ -21,6 +21,12 @@
   </div>
 </template>
 
+<script setup>
+useHead({
+  titleTemplate: `${"Трансфер | Service Looch"}`
+})
+</script>
+
 <script>
 
 	export default {

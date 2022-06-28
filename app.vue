@@ -44,18 +44,13 @@ useHead({
     //     type: 'text/javascript',
     //     defer: true
     // },
-    // {
-    //     src: 'static/js/fonticon/index.js',
-    //     type: 'text/javascript',
-    //     defer: true
-    // },
   ],
 })
 </script>
 
-
-
 <script>
+
+
 export default {
 
 }

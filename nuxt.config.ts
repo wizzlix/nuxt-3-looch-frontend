@@ -33,7 +33,7 @@ export default defineNuxtConfig({
         color: 'white',
     },
 
-    buildModules: [ '@pinia/nuxt']
+    buildModules: [ '@pinia/nuxt' ]
 
 
 })

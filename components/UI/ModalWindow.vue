@@ -9,15 +9,18 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">Добавить {{this.modalName}}?</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<UIBlueButton :onClick="onClickExit" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></UIBlueButton>
 					</div>
 					<div class="modal-body">
-
-					</div>
+           <h6 class="small-text">Если вы хотите сохранить запись, и продолжить ее редактирование - нажмите
+             <br><span>"Сохранить и продолжить"</span></h6>
+            <h6 class="small-text">Если вы хотите отправить запись в базу - нажмите
+              <br><span>"Сохранить"</span></h6>
+          </div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-						<button-blue :onClick="onClickSave" data-bs-dismiss="modal">Сохранить и продолжить</button-blue>
-						<button-blue :onClick="onClickSaveAndPush">Сохранить</button-blue>
+						<UIBlueButton :onClick="onClickExit" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</UIBlueButton>
+						<UIButtonBlue :onClick="onClickSave" data-bs-dismiss="modal">Сохранить и продолжить</UIButtonBlue>
+						<UIButtonBlue :onClick="onClickSaveAndPush">Сохранить</UIButtonBlue>
 					</div>
 				</div>
 			</div>
@@ -28,10 +31,8 @@
 
 <script>
 
-import ButtonBlue from "~/components/UI/ButtonBlue";
-export default {
 
-	components: {ButtonBlue},
+export default {
 
 	props: {
 		onClickSave: {
@@ -42,9 +43,12 @@ export default {
 			type: Function,
 			required: true,
 		},
+    onClickExit: {
+      type: Function,
+      required: true
+    },
 		modalName: {
 			type: String,
-			require: true,
 		}
 	}
 }
@@ -53,5 +57,14 @@ export default {
 <style lang="scss" scoped>
 .modal{
 	z-index: 9999;
+}
+.small-text{
+  color: rgba(91, 91, 89, 0.78);
+  font-size: 13px;
+  font-stretch: semi-condensed;
+  span{
+    font-size:  14px;
+    font-weight: bolder;
+  }
 }
 </style>

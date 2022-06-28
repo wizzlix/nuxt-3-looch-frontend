@@ -3,7 +3,7 @@
 
 		<main class="container">
 
-			<UIModalWindow :modal-name="'заказчика'" v-show="showModal"  :on-click-save="save" :on-click-save-and-push="submit"/>
+			<UIModalWindow :modal-name="'заказчика'" v-show="showModal"  :on-click-save="save" :on-click-save-and-push="submit" :on-click-exit="exit"/>
 
 			<section id="pageName">
 				<UIPageNameH1 :page-name="pageName" />
@@ -63,7 +63,10 @@ export default {
 		save(){
 			console.log("Спецификация сохранена")
 			this.showModal = !this.showModal
-		}
+		},
+    exit(){
+      this.showModal = !this.showModal
+    }
 	},
 }
 </script>

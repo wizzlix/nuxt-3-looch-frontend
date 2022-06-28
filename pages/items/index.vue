@@ -21,6 +21,12 @@
   </div>
 </template>
 
+<script setup>
+useHead({
+  titleTemplate: `${"Платы и изделия | Service Looch"}`
+})
+</script>
+
 <script>
 
 

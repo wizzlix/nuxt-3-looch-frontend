@@ -38,28 +38,39 @@
 export default {
   name: 'NavBar',
 
+  props: {
+    user: {
+      type: Object,
+      require: true
+    },
+    pages: {
+      type: Array,
+      require: true
+    }
+  },
+
 
 
   data() {
     return {
 
-      user: {
-        name: 'Дмитрий Братчиков',
-      },
-
-      pages: [
-        {name: 'Модули',href: '/modules',visible: true,subpages: [
-            {name: 'Выпущенные модули',href: '/modules',visible: true,subpages: null,last: false,},
-            {name: 'Ремонты модулей',href: '/repairs',visible: true,subpages: null,last: true,}],
-        },
-        { name: 'Заказы', href: '/orders', visible: true, subpages: null },
-        { name: 'Платы и изделия', href: '/items', visible: true, subpages: null },
-        { name: 'Прошивки', href: '/firmwares', visible: true, subpages: null },
-        {name: 'Заказчики',href: '/customers',visible: true,subpages: null,},
-        { name: 'Персонал', href: '/employees', visible: true, subpages: null },
-        {name: 'Базовые спецификации',href: '/config',visible: true,subpages: null,},
-        { name: 'Трансфер', href: '/move_item', visible: true, subpages: null },
-      ],
+      // user: {
+      //   name: 'Дмитрий Братчиков',
+      // },
+      //
+      // pages: [
+      //   {name: 'Модули',href: '/modules',visible: true,subpages: [
+      //       {name: 'Выпущенные модули',href: '/modules',visible: true,subpages: null,last: false,},
+      //       {name: 'Ремонты модулей',href: '/repairs',visible: true,subpages: null,last: true,}],
+      //   },
+      //   { name: 'Заказы', href: '/orders', visible: true, subpages: null },
+      //   { name: 'Платы и изделия', href: '/items', visible: true, subpages: null },
+      //   { name: 'Прошивки', href: '/firmwares', visible: true, subpages: null },
+      //   {name: 'Заказчики',href: '/customers',visible: true,subpages: null,},
+      //   { name: 'Персонал', href: '/employees', visible: true, subpages: null },
+      //   {name: 'Базовые спецификации',href: '/config',visible: true,subpages: null,},
+      //   { name: 'Трансфер', href: '/move_item', visible: true, subpages: null },
+      // ],
 
     }
   },

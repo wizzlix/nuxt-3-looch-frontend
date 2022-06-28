@@ -3,7 +3,7 @@
 
 		<main class="container">
 
-			<UIModalWindow :modal-name="'прошивку'" v-show="showModal"  :on-click-save="save" :on-click-save-and-push="submit"/>
+			<UIModalWindow :modalName="'прошивку'" v-show="showModal"  :on-click-save="save" :on-click-save-and-push="submit" :on-click-exit="exit"/>
 
 
 			<section id="pageName">
@@ -62,7 +62,6 @@ export default {
 
 		showModalFunction(){
 			this.showModal = !this.showModal
-
 		},
 		submit(){
 			console.log("Добавлена прошивка")
@@ -72,7 +71,10 @@ export default {
 		save(){
 			console.log("Прошивка сохранена")
 			this.showModal = !this.showModal
-		}
+		},
+    exit(){
+      this.showModal = !this.showModal
+    }
 	},
 }
 </script>

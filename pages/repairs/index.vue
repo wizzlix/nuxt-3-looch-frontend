@@ -15,6 +15,12 @@
   </div>
 </template>
 
+<script setup>
+useHead({
+  titleTemplate: `${"Ремонты модулей | Service Looch"}`
+})
+</script>
+
 <script>
 
 	import PageNameH1 from '~/components/UI/PageNameH1.vue'

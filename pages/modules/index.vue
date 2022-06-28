@@ -15,7 +15,15 @@
   </div>
 </template>
 
+<script setup>
+useHead({
+  titleTemplate: `${"Выпущенные модули | Service Looch"}`
+})
+</script>
+
 <script>
+
+
 
 
 	export default {

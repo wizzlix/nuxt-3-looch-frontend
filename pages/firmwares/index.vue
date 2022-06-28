@@ -21,6 +21,14 @@
   </div>
 </template>
 
+<script setup>
+import {useHead} from "nuxt/app";
+
+useHead({
+  titleTemplate: `${"Прошивки | Service Looch"}`
+})
+</script>
+
 <script>
 	export default {
 		name: "FirmwaresMainPage",
