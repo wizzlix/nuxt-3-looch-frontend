@@ -7,7 +7,7 @@
       </section>
 
       <section class="BlueButtonContainer">
-        <NuxtLink  :to="`${this.page}` + `${this.new}`">
+        <NuxtLink  :to="`${page}` + `${newAlias}`">
           <UIButtonBlue class="BlueButton">Добавить трaнсфер</UIButtonBlue>
         </NuxtLink>
       </section>
@@ -35,7 +35,7 @@ useHead({
 			  return{
 					pageName: 'Трансфер',
           page: "/move_item/",
-          new: "new/"
+          newAlias: "new/"
 				}
 		},
 

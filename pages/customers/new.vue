@@ -71,6 +71,12 @@ export default {
 }
 </script>
 
+<script setup>
+useHead({
+  titleTemplate: `${"Добавить заказчика | Service Looch"}`
+})
+</script>
+
 <style lang="css" scoped>
 
 

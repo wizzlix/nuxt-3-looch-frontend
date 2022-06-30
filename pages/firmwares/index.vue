@@ -7,7 +7,7 @@
       </section>
 
       <section class="BlueButtonContainer">
-        <NuxtLink  :to="`${this.page}` + `${this.new}`">
+        <NuxtLink  :to="`${page}` + `${newAlias}`">
           <UIButtonBlue class="BlueButton">Добавить прошивку</UIButtonBlue>
         </NuxtLink>
       </section>
@@ -36,7 +36,7 @@ useHead({
 			  return{
 					pageName: 'Прошивки',
           page: "/firmwares/",
-          new: "new/"
+          newAlias: "new/"
 				}
 		},
 		methods: {

@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt'
+import webpack from 'webpack'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -33,7 +34,19 @@ export default defineNuxtConfig({
         color: 'white',
     },
 
-    buildModules: [ '@pinia/nuxt' ]
+    build: {
+        plugins: [
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery',
+                'window.jQuery': 'jquery'
+            })
+        ]
+    },
+
+    buildModules: [ '@pinia/nuxt' ],
+
+
 
 
 })

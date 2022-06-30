@@ -8,7 +8,7 @@
       </section>
 
       <section class="BlueButtonContainer">
-        <NuxtLink  :to="`${this.page}` + `${this.new}`">
+        <NuxtLink  :to="`${page}` + `${newAlias}`">
           <UIButtonBlue class="BlueButton">Добавить заказчика</UIButtonBlue>
         </NuxtLink>
       </section>
@@ -37,7 +37,7 @@ export default {
     return {
       pageName: 'Заказчики',
       page: "/customers/",
-      new: "new/"
+      newAlias: "new/"
     }
   },
 }

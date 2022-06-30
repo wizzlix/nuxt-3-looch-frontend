@@ -29,6 +29,12 @@
 	</div>
 </template>
 
+<script setup>
+useHead({
+  titleTemplate: `${"Добавить элемент | Service Looch"}`
+})
+</script>
+
 <script>
 
 export default {

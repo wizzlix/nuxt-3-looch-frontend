@@ -70,6 +70,13 @@
 	</div>
 </template>
 
+
+<script setup>
+useHead({
+  titleTemplate: `${"Добавить трансфер | Service Looch"}`
+})
+</script>
+
 <script>
 
 

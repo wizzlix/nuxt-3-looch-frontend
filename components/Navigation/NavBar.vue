@@ -2,8 +2,8 @@
   <div id="NavBar" class="">
     <nav class="looch-navbar navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
-        <nuxt-link class="navbar-brand" href="/"
-        ><img src="../../static/logo.png" alt="ЛУЧ"
+        <nuxt-link title="Главная" class="navbar-brand" href="/"
+        ><img src="../../static/logo.svg" alt="ЛУЧ"
         /></nuxt-link>
 
         <button

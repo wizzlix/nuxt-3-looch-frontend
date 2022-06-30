@@ -37,6 +37,12 @@
 	</div>
 </template>
 
+<script setup>
+useHead({
+  titleTemplate: `${"Добавить прошивку | Service Looch"}`
+})
+</script>
+
 <script>
 
 

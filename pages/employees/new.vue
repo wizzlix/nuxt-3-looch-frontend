@@ -40,6 +40,12 @@
 	</div>
 </template>
 
+<script setup>
+useHead({
+  titleTemplate: `${"Добавить сотрудника | Service Looch"}`
+})
+</script>
+
 <script>
 
 export default {

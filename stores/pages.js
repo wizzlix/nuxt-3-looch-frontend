@@ -8,17 +8,17 @@ export const usePagesStore = defineStore("pages",{
     actions: {
         init(){
             this.pages = [
-                {name: 'Модули',href: '/modules',visible: true,subpages: [
-                        {name: 'Выпущенные модули',href: '/modules',visible: true,subpages: null,last: false,},
-                        {name: 'Ремонты модулей',href: '/repairs',visible: true,subpages: null,last: true,}],
+                {name: 'Модули',href: '/modules',visible: true, description: "Модули",subpages: [
+                        {name: 'Выпущенные модули',href: '/modules',visible: true, description: "Выпущенные модули",subpages: null,last: false,},
+                        {name: 'Ремонты модулей',href: '/repairs',visible: true,description: "Ремонты модулей",subpages: null,last: true,}],
                 },
-                { name: 'Заказы', href: '/orders', visible: true, subpages: null },
-                { name: 'Платы и изделия', href: '/items', visible: true, subpages: null },
-                { name: 'Прошивки', href: '/firmwares', visible: true, subpages: null },
-                {name: 'Заказчики',href: '/customers',visible: true,subpages: null,},
-                { name: 'Персонал', href: '/employees', visible: true, subpages: null },
-                {name: 'Базовые спецификации',href: '/config',visible: true,subpages: null,},
-                { name: 'Трансфер', href: '/move_item', visible: true, subpages: null },
+                { name: 'Заказы', href: '/orders', visible: true,description: "Заказы", subpages: null },
+                { name: 'Платы и изделия', href: '/items', visible: true,description: "Платы и изделия", subpages: null },
+                { name: 'Прошивки', href: '/firmwares', visible: true,description: "Прошивки", subpages: null },
+                {name: 'Заказчики',href: '/customers',visible: true,description: "Заказчики",subpages: null,},
+                { name: 'Персонал', href: '/employees', visible: true,description: "Персонал", subpages: null },
+                {name: 'Базовые спецификации',href: '/config',visible: true,description: "Базовые спецификации",subpages: null,},
+                { name: 'Трансфер', href: '/move_item', visible: true,description: "Трансфер", subpages: null },
             ]
 
             this.pages.forEach(item => {
@@ -34,6 +34,7 @@ export const usePagesStore = defineStore("pages",{
                         obgOfSubpages.href = item.href
                         obgOfSubpages.visible = item.visible
                         obgOfSubpages.subpages = item.subpages
+                        obgOfSubpages.description = item.description
                         obgOfSubpages.last = item.last
 
                         obgOfSubpages.icon = '/static/icons/pages' + item.href + ".svg"

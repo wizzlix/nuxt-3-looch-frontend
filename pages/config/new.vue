@@ -43,6 +43,12 @@
 	</div>
 </template>
 
+<script setup>
+useHead({
+  titleTemplate: `${"Добавить спецификацию | Service Looch"}`
+})
+</script>
+
 <script>
 
 export default {

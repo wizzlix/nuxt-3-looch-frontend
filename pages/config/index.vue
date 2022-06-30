@@ -7,7 +7,7 @@
       </section>
 
       <section class="BlueButtonContainer">
-        <NuxtLink  :to="`${this.page}` + `${this.new}`">
+        <NuxtLink  :to="`${page}` + `${newAlias}`">
           <UIButtonBlue class="BlueButton">Добавить спецификацию</UIButtonBlue>
         </NuxtLink>
         </section>
@@ -34,7 +34,7 @@ useHead({
 			  return{
 					pageName: 'Базовые спецификации',
           page: "/config/",
-          new: "new/"
+          newAlias: "new/"
 				}
 		},
 

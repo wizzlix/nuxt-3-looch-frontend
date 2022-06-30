@@ -30,6 +30,12 @@
 	</div>
 </template>
 
+<script setup>
+useHead({
+  titleTemplate: `${"Добавить заказ | Service Looch"}`
+})
+</script>
+
 <script>
 
 

@@ -1,15 +1,13 @@
 <template>
 	<div>
 		<section>
-		<!-- Button trigger modal -->
-
 		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false" role="dialog" data-backdrop="static" data-keyboard="false">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Добавить {{this.modalName}}?</h5>
-						<UIBlueButton :onClick="onClickExit" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></UIBlueButton>
+						<h5 class="modal-title" id="exampleModalLabel">Добавить {{modalName}}?</h5>
+						<UIButtonBlue :onClick="onClickExit" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></UIButtonBlue>
 					</div>
 					<div class="modal-body">
            <h6 class="small-text">Если вы хотите сохранить запись, и продолжить ее редактирование - нажмите
@@ -18,7 +16,7 @@
               <br><span>"Сохранить"</span></h6>
           </div>
 					<div class="modal-footer">
-						<UIBlueButton :onClick="onClickExit" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</UIBlueButton>
+						<UIButtonBlue :onClick="onClickExit" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</UIButtonBlue>
 						<UIButtonBlue :onClick="onClickSave" data-bs-dismiss="modal">Сохранить и продолжить</UIButtonBlue>
 						<UIButtonBlue :onClick="onClickSaveAndPush">Сохранить</UIButtonBlue>
 					</div>
@@ -31,6 +29,8 @@
 
 <script>
 
+
+import $ from 'jquery'
 
 export default {
 
@@ -49,8 +49,15 @@ export default {
     },
 		modalName: {
 			type: String,
+      required: true
 		}
-	}
+	},
+  mounted(){
+    $('#exampleModal').modal({
+      backdrop: 'static',
+      keyboard: false
+    })
+  }
 }
 </script>
 

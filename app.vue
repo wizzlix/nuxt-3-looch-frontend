@@ -8,7 +8,7 @@
 
 <script setup>
 useHead({
-  title: '[NEW] Service Looch',
+  title: 'Загрузка... Service Looch',
   htmlAttrs: {
     lang: 'ru'
   },
