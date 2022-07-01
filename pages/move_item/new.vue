@@ -17,22 +17,8 @@
 
 				<div class="input-group element">
 					<span class="input-group-text" id="inputGroup-sizing-default">Отправляемые элементы : </span>
-
-					<!--						<label class="typo__label">Tagging</label>-->
-					<multiselect
-						class="form-control"
-						v-model="value"
-						tag-placeholder="Добавить новый тег"
-						placeholder="Поиск..."
-						label="name"
-						track-by="id"
-
-						:options="options"
-						:multiple="true" >
-
-					</multiselect>
-					<!--						<pre class="language-json"><code>{{ value  }}</code></pre>-->
-
+          <UITheMultiselect class="form-control"  />
+<!--          :data-store=""-->
 				</div>
 
 				<div class="input-group element">
@@ -47,10 +33,7 @@
 
 				<div class="input-group  element">
 					<span class="input-group-text comment" id="inputGroup-sizing-default">Комментарий : </span>
-<!--					<textarea id="startDate" class="form-control" type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">-->
 
-<!--					</textarea>-->
-					<UITextEditor class="form-control" id="startDate" />
 				</div>
 
 				<div class="input-group element  date">
@@ -84,14 +67,12 @@ useHead({
 
 // UI
 
-import Multiselect from 'vue-multiselect'
 
 
 
 
 export default {
 	name: "NewTransfer",
-	components: {Multiselect},
 	data(){
 		return{
 			pageName: 'Новый трансфер',

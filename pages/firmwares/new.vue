@@ -20,7 +20,10 @@
 
 				<div class="input-group  element">
 					<span class="input-group-text comment" id="inputGroup-sizing-default">Комментарий : </span>
-					<UITextEditor class="form-control" id="startDate" />
+          <client-only>
+            <VueEditor />
+<!--            <UITextEditor class="form-control" />-->
+          </client-only>
 				</div>
 
 				<div class="input-group  element">

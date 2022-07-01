@@ -52,12 +52,12 @@ export default {
       required: true
 		}
 	},
-  mounted(){
-    $('#exampleModal').modal({
-      backdrop: 'static',
-      keyboard: false
-    })
-  }
+  // mounted(){
+  //   $('#exampleModal').modal({
+  //     backdrop: 'static',
+  //     keyboard: false
+  //   })
+  // }
 }
 </script>
 

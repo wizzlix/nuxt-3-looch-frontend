@@ -48,10 +48,13 @@ useHead({
 })
 </script>
 
+
 <script>
 
 
 export default {
-
+  mounted(){
+    console.log(process.client)
+  }
 }
 </script>
