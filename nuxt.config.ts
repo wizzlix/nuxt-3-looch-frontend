@@ -32,14 +32,6 @@ export default defineNuxtConfig({
         },
 
         build: {
-            plugins: [
-                new webpack.ProvidePlugin({
-                    $: 'jquery',
-                    jQuery: 'jquery',
-                    'window.jQuery': 'jquery'
-                })
-            ],
-
             transpile: ['quill']
         },
 
@@ -54,7 +46,6 @@ export default defineNuxtConfig({
     // modules: ["vue3-editor/nuxt"],
 
     buildModules: [ '@pinia/nuxt' ],
-
 
 
 

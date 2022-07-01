@@ -18,7 +18,7 @@
 				<div class="input-group element">
 					<span class="input-group-text" id="inputGroup-sizing-default">Отправляемые элементы : </span>
           <UITheMultiselect class="form-control"  />
-<!--          :data-store=""-->
+<!--       TODO:   :data-store=""-->
 				</div>
 
 				<div class="input-group element">

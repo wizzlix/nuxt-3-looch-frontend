@@ -83,9 +83,9 @@
 
 // vuex
 
-
 import {useMoveItemStore} from "../../../stores/moveitem";
 import {mapState} from "pinia";
+
 
 export default {
 	name: 'MoveItemTable',
@@ -111,9 +111,9 @@ export default {
 	},
 
 	mounted() {
-		// $(document).ready(function () {
-		// 	$('#example').DataTable();
-		// });
+    $(document).ready(function () {
+      $('#example').DataTable();
+    });
 	},
 
 }

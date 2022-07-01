@@ -25,25 +25,25 @@ useHead({
 
   script: [
     {
+      src: "/static/js/jquery/jquery.js",
+      type: 'text/javascript',
+      // defer: true
+    },
+    {
       src: "/static/js/bootstrap.bundle.min.js",
       type: 'text/javascript',
       // defer: true
     },
-    // {
-    //     src: 'static/js/jquery/index.js',
-    //     type: 'text/javascript',
-    //     // defer: true
-    // },
-    // {
-    //     src: 'static/js/datatables/index.js',
-    //     type: 'text/javascript',
-    //     defer: true
-    // },
-    // {
-    //     src: 'static/js/datatables.bootstrap5/index.js',
-    //     type: 'text/javascript',
-    //     defer: true
-    // },
+    {
+      src: "/static/js/datatables/datatables.js",
+      type: 'text/javascript',
+      // defer: true
+    },
+    {
+      src: "/static/js/datatables.bootstrap5/datatables.bootstrap5.js",
+      type: 'text/javascript',
+      // defer: true
+    },
   ],
 })
 </script>
