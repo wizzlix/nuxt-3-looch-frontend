@@ -71,13 +71,10 @@ export default {
 		}
 	},
 
-	mounted(){
-		// $(document).ready(function () {
-		// 	$('#example').DataTable();
-		// });
+  mounted() {
 
-	},
-
+    $('#example').DataTable()
+  }
 }
 </script>
 

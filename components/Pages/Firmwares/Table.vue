@@ -84,11 +84,11 @@ export default {
 		}
 	},
 
-	mounted(){
-		// $(document).ready(function () {
-		// 	$('#example').DataTable();
-		// });
-	},
+  mounted(){
+    $(document).ready(function () {
+      $('#example').DataTable();
+    });
+  }
 
 }
 </script>

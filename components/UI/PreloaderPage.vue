@@ -12,20 +12,19 @@
 
 <script>
 export default {
-  beforeMount() {
-    // Скрипт прелоадера
-    window.onload = function () {
-      document.body.classList.add('loaded');
+
+  mounted() {
+    if (document.readyState==='complete')
+    {
+      window.setTimeout(() => {
+        document.body.classList.add('loaded_hiding')
+        window.setTimeout(function () {
+          document.body.classList.add('loaded')
+          document.body.classList.remove('loaded_hiding')
+        }, 1000)
+      }, 10)
     }
-    // window.onload = function () {
-    //   console.log("Loaded")
-    //   document.body.classList.add('loaded_hiding')
-    //   window.setTimeout(function () {
-    //     document.body.classList.add('loaded')
-    //     document.body.classList.remove('loaded_hiding')
-    //   }, 500)
-    // }
-  },
+  }
 }
 </script>
 
@@ -36,7 +35,7 @@ export default {
   top: 0;
   right: 0;
   bottom: 0;
-  background: rgba(246, 246, 246, 0.689);
+  background: rgba(246, 246, 246, 0.96);
   z-index: 1001;
 }
 

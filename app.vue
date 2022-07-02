@@ -7,44 +7,33 @@
 </template>
 
 <script setup>
-useHead({
-  title: 'Загрузка... Service Looch',
-  htmlAttrs: {
-    lang: 'ru'
-  },
-  meta: [
-    {charset: 'utf-8'},
-    {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-    {hid: 'description', name: 'description', content: ''},
-    {name: 'format-detection', content: 'telephone=no'},
-  ],
-  link: [{
-    rel: 'icon',
-    href: '/static/logo.svg'
-  }],
 
+import {useHead} from "nuxt/app";
+
+useHead({
   script: [
-    {
-      src: "/static/js/jquery/jquery.js",
-      type: 'text/javascript',
-      // defer: true
-    },
     {
       src: "/static/js/bootstrap.bundle.min.js",
       type: 'text/javascript',
       // defer: true
     },
     {
-      src: "/static/js/datatables/datatables.js",
-      type: 'text/javascript',
-      // defer: true
+      src: "/assets/datatables/jquery.js",
+      type: "text/javascript",
+      defer: true
     },
     {
-      src: "/static/js/datatables.bootstrap5/datatables.bootstrap5.js",
-      type: 'text/javascript',
-      // defer: true
+      src: "/assets/datatables/datatables.js",
+      type: "text/javascript",
+      defer: true
     },
+    // {
+    //     src: "/assets/datatables/datatablesbs5.js",
+    //     type: "text/javascript",
+    //     // defer: true
+    // },
   ],
+
 })
 </script>
 
@@ -53,8 +42,7 @@ useHead({
 
 
 export default {
-  mounted(){
-    console.log(process.client)
-  }
+
+
 }
 </script>

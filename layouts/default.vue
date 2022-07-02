@@ -1,7 +1,7 @@
 <template>
   <div>
     <section id="preloader">
-<!--      <UIPreloaderPage />-->
+      <UIPreloaderPage />
     </section>
 
     <header id="header">

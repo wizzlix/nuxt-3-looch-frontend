@@ -110,11 +110,11 @@ export default {
 		}
 	},
 
-	mounted() {
+  mounted(){
     $(document).ready(function () {
       $('#example').DataTable();
     });
-	},
+  }
 
 }
 </script>

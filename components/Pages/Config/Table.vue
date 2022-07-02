@@ -87,13 +87,11 @@ export default {
 			headers: ["№", "Название", "Обозначение", "Исполнитель", "Тип"],
 		}
 	},
-
-
-	mounted(){
-		// $(document).ready(function () {
-		// 	$('#example').DataTable();
-		// });
-	},
+  mounted(){
+    $(document).ready(function () {
+      $('#example').DataTable();
+    });
+  }
 }
 </script>
 
